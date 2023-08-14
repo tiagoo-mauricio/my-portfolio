@@ -1,0 +1,37 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 0;
+}
+h1{
+  margin: 20px;
+  padding: 20px 20px 20px 20px;
+
+}
+header, main, footer {
+  padding: 40px 0;
+  margin-top: 20px;
+}
+
+.header-content, .main-content, .footer-content {
+  padding: 20px;
+  margin-top: 20pxs;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: flex-end; /* Alinha os ícones à direita */
+  align-items: center;
+  gap: 20px; /* Adiciona espaçamento entre os ícones */
+  margin-top: 20px;
+}
+
+.social-icon {
+  font-size: 40px; /* Aumenta o tamanho dos ícones */
+  color: #007bff;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  color: #0056b3;
+}
+
