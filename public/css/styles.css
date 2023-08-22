@@ -8,7 +8,7 @@ body {
 header {
   border-top: 3px solid black;
   background-color: white;
-  padding: 10px 10px;
+  padding: 10px 20px;
   text-align: left;
 }
 
@@ -21,13 +21,13 @@ header {
 .full-name {
   color: black;
   font-weight: bold;
-  font-size: 50px;
+  font-size: 60px;
 }
 
 .last-name {
   color: #335465; /* Cor do sobrenome */
   font-weight: bold;
-  font-size: 50px;
+  font-size: 60px;
 }
 
 .contact-info{
@@ -58,7 +58,7 @@ header {
 .biography p {
   color: #8f9aa1;
   margin-top: 20px;
-  text-indent: 0px;
+  text-indent: 40px;
   text-align: justify;
 }
 /* Estilos do rodapé */
