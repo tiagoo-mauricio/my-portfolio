@@ -1,7 +1,5 @@
 .left {
   background-color: #335465;
-  float: left;
-  width: 20%;
   padding: 20px;
 }
 
@@ -18,8 +16,6 @@ body {
   font-family: Arial, sans-serif;
   background-color: white;
 }
-
-
 
 header {
   border-top: 3px solid black;
