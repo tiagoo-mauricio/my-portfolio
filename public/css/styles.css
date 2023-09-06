@@ -1,9 +1,25 @@
+.left {
+  background-color: #335465;
+  float: left;
+  width: 20%;
+  padding: 20px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 80%;
+  border: 5px solid #8f9aa1;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
   background-color: white;
 }
+
+
 
 header {
   border-top: 3px solid black;
@@ -42,9 +58,11 @@ header {
   display: inline;
   text-align: justify;
 }
-
+.right{
+  border: 1px solid red;
+}
 .main {
-  padding: 20px;
+  padding: 10px;
   text-align: left;
 }
 
@@ -57,7 +75,7 @@ header {
 
 .biography p {
   color: #8f9aa1;
-  margin-top: 20px;
+  margin-top: 10px;
   text-indent: 40px;
   text-align: justify;
 }
