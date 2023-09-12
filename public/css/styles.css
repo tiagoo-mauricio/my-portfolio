@@ -2,9 +2,58 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-color: white;
+  background-color: white;  
+  min-width: 100vh;
+}
+.row{
+  min-height: 100vh;
+  display: flex;
 }
 
+.left {
+  background-color: #335465;
+  padding: 20px;
+  text-align: center;
+}
+
+img {
+  max-width: 50%;
+  height: auto;
+  border-radius: 50%; 
+  border: 5px solid #8f9aa1;
+  transition: transform 0.2s ease;
+  margin-top: 20px;
+}
+
+img:hover {
+  transform: scale(1.2);
+}
+
+ul {
+  margin-top: 20px;
+  padding: 10px;
+  list-style: none; 
+}
+
+.menu li::marker {
+  display: none;
+}
+
+
+.menu li a {
+  text-decoration: none;
+  color: #8f9aa1;
+  font-weight: bold;
+  transition: color 0.2s ease, font-size 0.2s ease; 
+  padding: 10px 0;
+  font-size: 16px; 
+}
+
+.menu li a:hover {
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 18px; 
+}
 header {
   border-top: 3px solid black;
   background-color: white;
@@ -18,33 +67,39 @@ header {
   background-color: black;
 }
 
-.full-name {
-  color: black;
+.full-name,
+.last-name {
   font-weight: bold;
   font-size: 60px;
+}
+
+.full-name {
+  color: black;
 }
 
 .last-name {
-  color: #335465; /* Cor do sobrenome */
-  font-weight: bold;
-  font-size: 60px;
+  color: #335465;
 }
 
-.contact-info{
+.contact-info,
+.email {
   color: #8f9aa1;
   font-weight: bold;
   display: inline;
   text-align: justify;
 }
+
 .email {
-  color:#335465;
-  font-weight: bold;
-  display: inline;
-  text-align: justify;
+  color: #335465;
+}
+
+.right {
+  border: 1px;
+  flex: 2;
 }
 
 .main {
-  padding: 20px;
+  padding: 10px;
   text-align: left;
 }
 
@@ -57,10 +112,11 @@ header {
 
 .biography p {
   color: #8f9aa1;
-  margin-top: 20px;
+  margin-top: 10px;
   text-indent: 40px;
   text-align: justify;
 }
+
 /* Estilos do rodapé */
 .footer-content {
   display: flex;
@@ -79,5 +135,3 @@ header {
 .social-icon:hover {
   color: #342e2c;
 }
-
-
