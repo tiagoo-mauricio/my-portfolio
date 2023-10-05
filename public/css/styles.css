@@ -3,7 +3,12 @@ body {
   padding: 0;
   font-family: Arial, sans-serif;
   background-color: white;  
-  min-width: 100vh;
+  min-width: 100vw;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 .row{
   min-height: 100vh;
@@ -14,6 +19,12 @@ body {
   background-color: #335465;
   padding: 20px;
   text-align: center;
+  top: 0;
+  left: 0; /* Defina a posição à esquerda da tela */
+  bottom: 0; /* Estenda até a parte inferior da tela */
+  min-height: 100vh;
+  width: 20%; /* Ajuste a largura da seção esquerda conforme necessário */
+  overflow-y: auto; /* Adicione a barra de rolagem se necessário */;
 }
 
 img {
@@ -68,7 +79,8 @@ header {
 }
 
 .full-name,
-.last-name {
+.last-name, 
+.main2 {
   font-weight: bold;
   font-size: 60px;
 }
@@ -79,6 +91,10 @@ header {
 
 .last-name {
   color: #335465;
+}
+.namepjt{
+  color: #335465;
+  font-weight: bold;
 }
 
 .contact-info,
@@ -95,10 +111,45 @@ header {
 
 .right {
   border: 1px;
+  flex: 2; /* Altere de flex: 2; para flex: 1; */
+  background-color: white; /* Adicione um fundo branco para preencher a tela */
+  overflow: auto; /* Evita que haja barras de rolagem caso o conteúdo seja maior do que a tela */
+}
+.rightportfolio {
+  border: 1px solid;
   flex: 2;
+  background-color: white;
+  padding: 20px;
+  overflow-y: scroll; /* Adicione a barra de rolagem apenas na coluna da direita */
+  width: 50%;
+}
+.scrollable {
+  overflow-y: auto;
+}
+/* Estilos para a imagem do perfil profissional */
+.perfil-profissional {
+  max-width: 50%;
+  height: auto;
+  border-radius: 50%;
+  border: 5px solid #8f9aa1;
+  margin-top: 20px;
 }
 
-.main {
+/* Estilos para as imagens dos projetos */
+.imgpjt {
+  /* Estilos diferentes para as imagens dos projetos (tamanho original e sem bordas) */
+  max-width: 100%;
+  height: auto;
+  border: none;
+  border-radius: 10px;
+  border: 1px solid #335465;
+  /* Adicione outros estilos desejados para as imagens dos projetos */
+}
+.imgpjt:hover {
+  transform: none; /* Define a transformação como "none" para remover o efeito de escala */
+}
+
+.main, .main2 {
   padding: 10px;
   text-align: left;
 }
@@ -110,7 +161,20 @@ header {
   margin-top: 20px;
 }
 
-.biography p {
+.decport,.biography p {
+  color: #8f9aa1;
+  margin-top: 10px;
+  text-indent: 40px;
+  text-align: justify;
+}
+.resumo {
+  color: #8f9aa1;
+  margin-top: 10px;
+  text-indent: 40px;
+  text-align: justify;
+  font-size: 20px;
+}
+.descricao{
   color: #8f9aa1;
   margin-top: 10px;
   text-indent: 40px;
