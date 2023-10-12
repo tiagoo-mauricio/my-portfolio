@@ -3,17 +3,27 @@ body {
   padding: 0;
   font-family: Arial, sans-serif;
   background-color: white;  
-  min-width: 100vh;
+  min-width: 100vw;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 .row{
   min-height: 100vh;
   display: flex;
 }
-
 .left {
+  display: flex;
+  justify-content: center;
   background-color: #335465;
   padding: 20px;
   text-align: center;
+  width: 20%; /* Ajuste a largura da seção esquerda conforme necessário */
+}
+.fixed {
+  position: fixed;
 }
 
 img {
@@ -22,7 +32,7 @@ img {
   border-radius: 50%; 
   border: 5px solid #8f9aa1;
   transition: transform 0.2s ease;
-  margin-top: 20px;
+  margin-top: 20px auto;
 }
 
 img:hover {
@@ -33,6 +43,25 @@ ul {
   margin-top: 20px;
   padding: 10px;
   list-style: none; 
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Isso faz com que o contêiner ocupe toda a altura da viewport (tela) */
+}
+
+.center-content {
+  text-align: center;
+}
+
+.img-fluid {
+  max-width: 80%;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
 }
 
 .menu li::marker {
@@ -68,7 +97,10 @@ header {
 }
 
 .full-name,
-.last-name {
+.last-name, 
+.formacao,
+.experiencia,
+.portfolio  {
   font-weight: bold;
   font-size: 60px;
 }
@@ -80,6 +112,16 @@ header {
 .last-name {
   color: #335465;
 }
+.namepjt, .curso{
+  color: #335465;
+  font-weight: bold;
+  font-size: 24px
+}
+.text-primary {
+  color: #335465 !important;
+  font-weight: bold;
+}
+
 
 .contact-info,
 .email {
@@ -88,6 +130,9 @@ header {
   display: inline;
   text-align: justify;
 }
+.tempocurso{
+  font-weight: bold;
+}
 
 .email {
   color: #335465;
@@ -95,14 +140,55 @@ header {
 
 .right {
   border: 1px;
+  flex: 2; /* Altere de flex: 2; para flex: 1; */
+  background-color: white; /* Adicione um fundo branco para preencher a tela */
+  overflow: auto; /* Evita que haja barras de rolagem caso o conteúdo seja maior do que a tela */
+}
+.rightportfolio {
+  border: 1px solid;
   flex: 2;
+  background-color: white;
+  padding: 20px;
+  overflow-y: scroll; /* Adicione a barra de rolagem apenas na coluna da direita */
+  width: 50%;
+}
+.scrollable {
+  overflow-y: auto;
+}
+/* Estilos para a imagem do perfil profissional */
+.perfil-profissional {
+  max-width: 50%;
+  height: auto;
+  border-radius: 50%;
+  border: 5px solid #8f9aa1;
+  margin-top: 20px;
 }
 
-.main {
+/* Estilos para as imagens dos projetos */
+.imgpjt {
+  /* Estilos diferentes para as imagens dos projetos (tamanho original e sem bordas) */
+  max-width: none;
+  height: auto;
+  border: none;
+  border-radius: 10px;
+  border: 1px solid #335465;
+  /* Adicione outros estilos desejados para as imagens dos projetos */
+}
+.imgpjt:hover {
+  transform: none; /* Define a transformação como "none" para remover o efeito de escala */
+}
+
+.main, .main2 {
   padding: 10px;
   text-align: left;
 }
 
+
+.ensino {
+  clip: black;
+  font-weight: bold;
+  font-size: 24px;
+}
 .profession p {
   color: black;
   font-weight: bold;
@@ -110,7 +196,24 @@ header {
   margin-top: 20px;
 }
 
-.biography p {
+.decport,.biography p {
+  color: #8f9aa1;
+  margin-top: 10px;
+  text-indent: 40px;
+  text-align: justify;
+}
+.resumo {
+  color: #8f9aa1;
+  margin-top: 10px;
+  text-indent: 40px;
+  text-align: justify;
+  font-size: 20px;
+}
+.infcurso {
+  color:#8f9aa1
+}
+
+.descricao{
   color: #8f9aa1;
   margin-top: 10px;
   text-indent: 40px;
@@ -134,4 +237,30 @@ header {
 
 .social-icon:hover {
   color: #342e2c;
+}
+section.resume-section {
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  max-width: 75rem;
+}
+section.resume-section .resume-section-content {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  section.resume-section {
+    min-height: 100vh;
+  }
+}
+@media (min-width: 992px) {
+  section.resume-section {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
 }
