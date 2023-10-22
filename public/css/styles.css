@@ -112,7 +112,9 @@ header {
 .last-name {
   color: #335465;
 }
-.namepjt, .curso{
+.namepjt, 
+.curso,
+.funcao{
   color: #335465;
   font-weight: bold;
   font-size: 24px
@@ -184,7 +186,7 @@ header {
 }
 
 
-.ensino {
+.ensino, .empresa {
   clip: black;
   font-weight: bold;
   font-size: 24px;
@@ -209,7 +211,7 @@ header {
   text-align: justify;
   font-size: 20px;
 }
-.infcurso {
+.infcurso, .infoexp{
   color:#8f9aa1
 }
 
