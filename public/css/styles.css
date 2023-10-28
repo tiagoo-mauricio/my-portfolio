@@ -119,6 +119,12 @@ header {
   font-weight: bold;
   font-size: 24px
 }
+.icon-color,
+.tech-name {
+  color: #335465;
+  font-weight: bold;
+}
+
 .text-primary {
   color: #335465 !important;
   font-weight: bold;
@@ -131,6 +137,13 @@ header {
   font-weight: bold;
   display: inline;
   text-align: justify;
+}
+.linguagens {
+  color: #8f9aa1;
+  font-weight: bold;
+  display: inline;
+  text-align: justify;
+  font-size: 24px
 }
 .tempocurso{
   font-weight: bold;
@@ -215,7 +228,8 @@ header {
   color:#8f9aa1
 }
 
-.descricao{
+.descricao, 
+.tech-desc{
   color: #8f9aa1;
   margin-top: 10px;
   text-indent: 40px;
