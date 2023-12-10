@@ -4,7 +4,6 @@ body {
   font-family: Arial, sans-serif;
   background-color: white;  
   min-width: 100vw;
-  overflow: hidden;
 }
 * {
   margin: 0;
@@ -416,12 +415,21 @@ section.resume-section .resume-section-content {
 }
 
 
-.no-gutter .row {
-  margin-right: 0;
+/* Adicione um estilo específico para remover a propriedade --bs-gutter-x */
+.no-gutter .container,
+.no-gutter .container-fluid,
+.no-gutter .container-lg,
+.no-gutter .container-md,
+.no-gutter .container-sm,
+.no-gutter .container-xl,
+.no-gutter .container-xxl {
+  --bs-gutter-x: 0; /* Substitua por 0 para remover o espaço horizontal */
+}
+
+/* Adicione um estilo específico para remover o preenchimento da row */
+.no-padding-row {
   margin-left: 0;
-  --bs-gutter-x: 0;
-  padding-right: 0;
-  padding-left: 0;
+  margin-right: 0;
 }
 
 iframe {
