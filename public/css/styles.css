@@ -413,3 +413,17 @@ section.resume-section .resume-section-content {
   color: #fff; /* Cor do ícone ao passar o mouse */
   border-color: #335465; /* Cor da borda ao passar o mouse */
 }
+
+
+.no-padding-row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+iframe {
+  border: none;
+  display: block; /* Remova espaçamento extra abaixo do iframe */
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+}
