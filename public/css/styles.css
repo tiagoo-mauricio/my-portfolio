@@ -17,7 +17,7 @@ body {
 .left {
   display: flex;
   justify-content: center;
-  background-color: #335465;
+  background-color: #001d3d;
   padding: 20px;
   text-align: center;
   width: 20%; /* Ajuste a largura da seção esquerda conforme necessário */
@@ -30,7 +30,7 @@ img {
   max-width: 50%;
   height: auto;
   border-radius: 50%; 
-  border: 5px solid #8f9aa1;
+  border: 5px solid #ffc300;
   transition: transform 0.2s ease;
   margin-top: 20px auto;
 }
@@ -71,7 +71,7 @@ ul {
 
 .menu li a {
   text-decoration: none;
-  color: #8f9aa1;
+  color: #ffc300;
   font-weight: bold;
   transition: color 0.2s ease, font-size 0.2s ease; 
   padding: 10px 0;
@@ -110,23 +110,23 @@ header {
 }
 
 .last-name {
-  color: #335465;
+  color: #003566;
 }
 .namepjt, 
 .curso,
 .funcao{
-  color: #335465;
+  color: #003566;
   font-weight: bold;
   font-size: 24px
 }
 .icon-color,
 .tech-name {
-  color: #335465;
+  color: #003566;
   font-weight: bold;
 }
 
 .text-primary {
-  color: #335465 !important;
+  color: #003566 !important;
   font-weight: bold;
 }
 
@@ -150,19 +150,19 @@ header {
 }
 
 .email {
-  color: #335465;
+  color: #003566;
 }
 
 .right {
   border: 1px;
   flex: 2; /* Altere de flex: 2; para flex: 1; */
-  background-color: white; /* Adicione um fundo branco para preencher a tela */
+  background-color: #ffff; /* Adicione um fundo branco para preencher a tela */
   overflow: auto; /* Evita que haja barras de rolagem caso o conteúdo seja maior do que a tela */
 }
 .rightportfolio {
   border: 1px solid;
-  flex: 2;
-  background-color: white;
+  flex: 1;
+  background-color: #ffff;
   padding: 20px;
   overflow-y: scroll; /* Adicione a barra de rolagem apenas na coluna da direita */
   width: 50%;
@@ -267,6 +267,12 @@ section.resume-section .resume-section-content {
   width: 100%;
 }
 
+@media (min-width: 992px) {
+  .navbar {
+    display: none; /* Oculta a barra de navegação */
+  }
+}
+
 @media (min-width: 768px) {
   section.resume-section {
     min-height: 100vh;
@@ -279,4 +285,131 @@ section.resume-section .resume-section-content {
     padding-top: 5rem;
     padding-bottom: 5rem;
   }
+}
+@media (max-width: 991px) {
+  .left {
+    display: none; /* Esconder a seção esquerda com a foto */
+  }
+
+  .right {
+    flex: 1; /* Ajuste o tamanho da seção direita para ocupar toda a largura */
+  }
+
+  img {
+    max-width: 100%; /* Ajuste a largura da imagem para preencher a tela */
+    margin-top: 20px; /* Adicione um espaço no topo da imagem */
+  }
+}
+
+/* Adicione regras de mídia para ajustar tamanhos de texto em dispositivos menores */
+@media (max-width: 767px) {
+  .full-name, .last-name, .formacao, .experiencia, .portfolio {
+    font-size: 36px; /* Reduza o tamanho do texto */
+  }
+
+  .profession p {
+    font-size: 18px; /* Reduza o tamanho do texto */
+  }
+
+  .biography p, .decport {
+    font-size: 16px; /* Reduza o tamanho do texto */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .full-name, .last-name, .formacao, .experiencia, .portfolio {
+    font-size: 48px; /* Ajuste o tamanho do texto para telas médias */
+  }
+
+  .profession p {
+    font-size: 20px; /* Ajuste o tamanho do texto para telas médias */
+  }
+
+  .biography p, .decport {
+    font-size: 16px; /* Ajuste o tamanho do texto para telas médias */
+  }
+}
+.navbar {
+
+  background-color: #001d3d; /* Adicione esta linha para definir a cor de fundo da barra de navegação */
+  /* Outras propriedades da barra de navegação permanecem aqui */
+}
+.navbar-toggler {
+  border: 2px solid #001d3d; /* Cor da borda */
+  color: #001d3d; /* Cor do ícone */
+  background-color: transparent; /* Cor de fundo transparente */
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Adiciona uma transição suave nas mudanças de cor */
+}
+
+.navbar-toggler:hover {
+  background-color: #335465; /* Cor de fundo ao passar o mouse */
+  color: #fff; /* Cor do ícone ao passar o mouse */
+  border-color: #335465; /* Cor da borda ao passar o mouse */
+}
+@media (max-width: 767px) {
+  /* Estilos específicos para telas menores */
+  .namepjt, .descricao, .tech-desc {
+    font-size: 16px; /* Ajuste o tamanho do texto para telas menores */
+  }
+
+  /* Adicione outras regras de mídia conforme necessário */
+}
+.projeto {
+  margin-bottom: 20px;
+}
+/* Estilos gerais para textos */
+.descricao, .tech-desc {
+  margin-top: 10px;
+  text-indent: 40px;
+  text-align: justify;
+}
+
+/* Media query para telas menores */
+@media (max-width: 767px) {
+  .namepjt, .descricao, .tech-desc {
+    font-size: 16px;
+    margin-top: 5px; /* Ajuste a margem para telas menores */
+  }
+}
+.imgpjt {
+  max-width: 100%;
+  height: auto;
+  border: none;
+  border-radius: 10px;
+  border: 1px solid #335465;
+}
+.navbar,
+.navbar a {
+  color: #ffc300;
+}
+
+.navbar a:hover {
+  color: white;
+}
+
+.navbar {
+  background-color: #001d3d; /* Adicione esta linha para definir a cor de fundo da barra de navegação */
+  color: #ffc300; /* Defina a cor do texto da barra de navegação */
+  /* Outras propriedades da barra de navegação permanecem aqui */
+}
+
+.navbar a {
+  color: #ffc300; /* Defina a cor do texto dos links na barra de navegação */
+}
+
+.navbar a:hover {
+  color: white; /* Defina a cor do texto ao passar o mouse sobre os links */
+}
+
+.navbar-toggler {
+  border: 2px solid #001d3d; /* Cor da borda */
+  color: #001d3d; /* Cor do ícone */
+  background-color: transparent; /* Cor de fundo transparente */
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Adiciona uma transição suave nas mudanças de cor */
+}
+
+.navbar-toggler:hover {
+  background-color: #335465; /* Cor de fundo ao passar o mouse */
+  color: #fff; /* Cor do ícone ao passar o mouse */
+  border-color: #335465; /* Cor da borda ao passar o mouse */
 }
