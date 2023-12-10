@@ -4,6 +4,7 @@ body {
   font-family: Arial, sans-serif;
   background-color: white;  
   min-width: 100vw;
+  overflow: hidden;
 }
 * {
   margin: 0;
@@ -415,9 +416,12 @@ section.resume-section .resume-section-content {
 }
 
 
-.no-padding-row {
-  margin-left: 0;
+.no-gutter .row {
   margin-right: 0;
+  margin-left: 0;
+  --bs-gutter-x: 0;
+  padding-right: 0;
+  padding-left: 0;
 }
 
 iframe {
